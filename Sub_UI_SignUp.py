@@ -26,25 +26,33 @@ def SignUpUI():
     pygame.display.update()
     #------------------------------------------------------------------------------
 
-    button(StartColourD,260,100,310,80,"Sign Up",big,310,110)
-    button(StartColour,250,90,310,80,"Sign Up",big,310,110)
+    button(StartColourD,260,40,310,80,"Sign Up",big,310,55)
+    button(StartColour,250,30,310,80,"Sign Up",big,310,45)
 
     #name button
-    button(StartColour,160,250,180,40,"First Name",small,170,255)
-    button(white,350,250,270,40,"",small,170,255)
+    button(StartColour,160,180,180,40,"First Name",small,170,185)
+    button(white,350,180,270,40,"",small,170,185)
 
     #surname button
-    button(StartColour,160,350,180,40,"Last Name",small,170,355)
-    button(white,350,350,270,40,"",small,170,355)
+    button(StartColour,160,275,180,40,"Last Name",small,170,280)
+    button(white,350,275,270,40,"",small,170,280)
 
     #username button
-    button(StartColour,160,450,180,40,"Username",small,170,455)
-    button(white,350,450,270,40,"",small,170,455)
+    button(StartColour,160,375,180,40,"Username",small,170,380)
+    button(white,350,375,270,40,"",small,170,380)
+
+    #upassword button
+    button(StartColour,160,475,180,40,"Password",small,170,480)
+    button(white,350,475,270,40,"",small,170,480)
+
+    #password check button
+    button(StartColour,160,575,180,40,"Confirm",small,170,580)
+    button(white,350,575,270,40,"",small,170,580)
 
     #security question button
-    button(backGC,60,535,180,10,"Security Question: What is your mothers maiden name",tiny,120,535)
-    button(StartColour,160,570,180,40,"Answer",small,190,575)
-    button(white,350,570,270,40,"",small,170,575)
+    button(backGC,60,685,180,10,"Security Question: What is your mothers maiden name",tiny,120,685)
+    button(StartColour,160,720,180,40,"Answer",small,190,725)
+    button(white,350,720,270,40,"",small,170,725)
 
     pygame.display.update()
 
@@ -58,25 +66,26 @@ def SignUpUI():
             elif event.type == pygame.MOUSEMOTION:
                 print(event.pos)
 
-    mousex,mousey = pygame.mouse.get_pos()
-    click = pygame.mouse.get_pressed()
+        mousex,mousey = pygame.mouse.get_pos()
+        click = pygame.mouse.get_pressed()
 
-    if mousex >= 350 and mousex <= 620 and mousey >= 250 and mousey <= 290:
-        print("hi")
-        
+        if mousex >= 350 and mousex <= 620 and mousey >= 250 and mousey <= 290:
+            print("hi")
+            
 
-    elif mousex >= 350 and mousex <= 620 and mousey >= 350 and mousey <= 390:
-        print("hi")
+        elif mousex >= 350 and mousex <= 620 and mousey >= 350 and mousey <= 390:
+            print("hi")
 
-    elif mousex >= 350 and mousex <= 620 and mousey >= 450 and mousey <= 490:
-        print("hi")
+        elif mousex >= 350 and mousex <= 620 and mousey >= 450 and mousey <= 490:
+            print("hi")
 
-    elif mousex >= 350 and mousex <= 620 and mousey >= 550 and mousey <= 590:
-        print("hi")
+        elif mousex >= 350 and mousex <= 620 and mousey >= 550 and mousey <= 590:
+            print("hi")
 
-    elif click[0] == 1:
-        print("clicked submit")
-        selec = True
+
+        elif click[0] == 1:
+            print("clicked submit")
+            selec = True
         name = "hi"
         surname,= "hello"
         Nuser = "hiya"
