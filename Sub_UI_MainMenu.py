@@ -12,7 +12,7 @@ def MainMenuUI():
         window.blit(Button2,(pos1,pos2))
         
     LogIn = "Log In"
-    SignIn = "Sign In"
+    SignUp = "Sign Up"
     backGC = (217, 240, 252)
     StartColour = (163,218,246)
     StartColourD = (132,205,242)
@@ -26,8 +26,8 @@ def MainMenuUI():
     button(StartColour,250,190,310,80,"Main Menu",270,210)
 
     #drawing 'buttons'
-    button(StartColourD,310,410,200,80,"Sign In",320,420)
-    button(StartColour,300,400,200,80,"Sign In",320,420)
+    button(StartColourD,310,410,200,80,"Sign Up",308,420)
+    button(StartColour,300,400,200,80,"Sign Up",308,420)
 
     #drawing the log in
     button(StartColourD,310,510,200,80,"Log In",325,520)
@@ -51,7 +51,7 @@ def MainMenuUI():
         click = pygame.mouse.get_pressed()
         #print(mousex,mousey)
         if mousex >= 300 and mousex <= 500 and mousey >= 400 and mousey <= 480:
-            button(StartColourD,300,400,200,80,SignIn,320,420)
+            button(StartColourD,300,400,200,80,SignUp,308,420)
             pygame.display.update()
 
 
@@ -75,8 +75,8 @@ def MainMenuUI():
             button(StartColour,250,190,310,80,"Main Menu",270,210)
             
             #drawing 'buttons'
-            button(StartColourD,310,410,200,80,SignIn,320,420)
-            button(StartColour,300,400,200,80,SignIn,320,420)
+            button(StartColourD,310,410,200,80,SignUp,308,420)
+            button(StartColour,300,400,200,80,SignUp,308,420)
 
             #drawing the log in
             button(StartColourD,310,510,200,80,LogIn,325,520)
