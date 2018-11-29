@@ -3,7 +3,7 @@ import pygame
 pygame.init()
     
 
-def SignUpUI():
+def SignUpUI(retry):
     def button(StartColour,x,y,width,height,text,fontC,pos1,pos2):
         pygame.draw.rect(window,(StartColour),(x,y,width,height))
         Button2 = fontC.render(text,1,(0,0,0))
@@ -60,6 +60,14 @@ def SignUpUI():
     button(StartColour,160,720,180,40,"Answer",small,190,725)
     button(white,350,720,270,40,"",small,170,725)
 
+    if retry == 1:
+        button(backGC,650,475,1,1,"Passwords",tiny,650,475)
+        button(backGC,650,480,1,1,"do not",tiny,650,490)
+        button(backGC,650,485,1,1,"match please",tiny,650,505)
+        button(backGC,650,490,1,1,"retry",tiny,650,520)
+    else:
+        pass
+
     pygame.display.update()
     
     pygame.mouse.set_pos([0,0])
@@ -99,7 +107,7 @@ def SignUpUI():
                             typeFirst = typeFirst[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
-                            pygame.mouse.set_pos([0,0])
+                            pygame.mouse.set_pos([400,235])
                             
                     print(typeFirst)
                     button(white,350,180,270,40,typeFirst,small,360,185)
@@ -125,7 +133,7 @@ def SignUpUI():
                             typeLast = typeLast[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
-                            pygame.mouse.set_pos([0,0])
+                            pygame.mouse.set_pos([400,335])
                             
                     print(typeLast)
                     button(white,350,275,270,40,typeLast,small,360,280)
@@ -151,7 +159,7 @@ def SignUpUI():
                             typeUser = typeUser[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
-                            pygame.mouse.set_pos([0,0])
+                            pygame.mouse.set_pos([400,435])
                             
                     print(typeUser)
                     button(white,350,375,270,40,typeUser,small,360,380)
@@ -177,7 +185,7 @@ def SignUpUI():
                             typePass = typePass[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
-                            pygame.mouse.set_pos([0,0])
+                            pygame.mouse.set_pos([400,535])
                             
                     print(typePass)
                     button(white,350,475,270,40,typePass,small,360,480)
@@ -203,7 +211,7 @@ def SignUpUI():
                             typeConfirm = typeConfirm[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
-                            pygame.mouse.set_pos([0,0])
+                            pygame.mouse.set_pos([400,635])
                             
                     print(typeConfirm)
                     button(white,350,575,270,40,typeConfirm,small,360,580)
@@ -229,7 +237,7 @@ def SignUpUI():
                             typeAnswer = typeAnswer[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
-                            pygame.mouse.set_pos([0,0])
+                            pygame.mouse.set_pos([400,635])
                             
                     print(typeAnswer)
                     button(white,350,720,270,40,typeAnswer,small,360,725)
