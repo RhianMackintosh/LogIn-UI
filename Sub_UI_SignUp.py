@@ -30,8 +30,10 @@ def SignUpUI():
     pygame.display.update()
     #------------------------------------------------------------------------------
 
-    button(StartColourD,260,40,310,80,"Sign Up",big,310,55)
-    button(StartColour,250,30,310,80,"Sign Up",big,310,45)
+    button(StartColourD,120,40,310,80,"Sign Up",big,170,55)
+    button(StartColour,110,30,310,80,"Sign Up",big,170,45)
+    button(StartColourD,460,40,210,80,"Submit",big,465,55)
+    button(StartColour,450,30,210,80,"Submit",big,465,45)
 
     #name button
     button(StartColour,160,180,180,40,"First Name",small,170,185)
@@ -94,7 +96,7 @@ def SignUpUI():
                         elif event.unicode.isdigit():
                             typeFirst += event.unicode
                         elif event.key == pygame.K_BACKSPACE:
-                            typeFirst = typeUser[:-1]
+                            typeFirst = typeFirst[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
                             pygame.mouse.set_pos([0,0])
@@ -120,7 +122,7 @@ def SignUpUI():
                         elif event.unicode.isdigit():
                             typeLast += event.unicode
                         elif event.key == pygame.K_BACKSPACE:
-                            typeLast = typeUser[:-1]
+                            typeLast = typeLast[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
                             pygame.mouse.set_pos([0,0])
@@ -172,7 +174,7 @@ def SignUpUI():
                         elif event.unicode.isdigit():
                             typePass += event.unicode
                         elif event.key == pygame.K_BACKSPACE:
-                            typePass = typeUser[:-1]
+                            typePass = typePass[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
                             pygame.mouse.set_pos([0,0])
@@ -185,7 +187,7 @@ def SignUpUI():
             button(StartColourD,140,565,500,60,"",small,170,280)
             button(StartColour,160,575,180,40,"Confirm",small,170,580)
             button(white,350,575,270,40,"",small,170,580)
-            button(white,350,575,270,40,typePass,small,360,385)
+            button(white,350,575,270,40,typePass,small,360,585)
             pygame.display.update()
 
             finished = False
@@ -198,7 +200,7 @@ def SignUpUI():
                         elif event.unicode.isdigit():
                             typeConfirm += event.unicode
                         elif event.key == pygame.K_BACKSPACE:
-                            typeConfirm = typeUser[:-1]
+                            typeConfirm = typeConfirm[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
                             pygame.mouse.set_pos([0,0])
@@ -224,7 +226,7 @@ def SignUpUI():
                         elif event.unicode.isdigit():
                             typeAnswer += event.unicode
                         elif event.key == pygame.K_BACKSPACE:
-                            typeAnswer = typeUser[:-1]
+                            typeAnswer = typeAnswer[:-1]
                         elif event.key == pygame.K_RETURN:
                             finished = True
                             pygame.mouse.set_pos([0,0])
@@ -232,14 +234,24 @@ def SignUpUI():
                     print(typeAnswer)
                     button(white,350,720,270,40,typeAnswer,small,360,725)
                     pygame.display.update()
+
+        elif mousex >= 450 and mousex <= 660 and mousey >= 30 and mousey <= 110:
+            button(StartColourD,450,30,210,80,"Submit",big,465,45)
+
+            if click[0] == 1:
+                print("Clicked Submit")
+                selec = True
+                return typeFirst, typeLast, typeUser, typePass, typeConfirm, typeAnswer
             
 
         else:
             button(backGC,130,150,520,650,"",small,0,0)
             
             #title button
-            button(StartColourD,260,40,310,80,"Sign Up",big,310,55)
-            button(StartColour,250,30,310,80,"Sign Up",big,310,45)
+            button(StartColourD,120,40,310,80,"Sign Up",big,170,55)
+            button(StartColour,110,30,310,80,"Sign Up",big,170,45)
+            button(StartColourD,460,40,210,80,"Submit",big,465,55)
+            button(StartColour,450,30,210,80,"Submit",big,465,45)
 
             #name button
             button(StartColour,160,180,180,40,"First Name",small,170,185)
